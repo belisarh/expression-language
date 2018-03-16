@@ -147,7 +147,7 @@ class BinaryNode extends Node
             case '*':
                 return $left * $right;
             case '/':
-                return $left / $right;
+                return $right ? $left / $right : null;
             case '%':
                 return $left % $right;
             case 'matches':
