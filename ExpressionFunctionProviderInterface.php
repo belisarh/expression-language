@@ -12,26 +12,12 @@
 namespace Symfony\Component\ExpressionLanguage;
 
 /**
- * Represents an expression.
- *
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class Expression
+interface ExpressionFunctionProviderInterface
 {
-    protected $expression;
-
-    public function __construct(string $expression)
-    {
-        $this->expression = $expression;
-    }
-
     /**
-     * Gets the expression.
-     *
-     * @return string The expression
+     * @return ExpressionFunction[] An array of Function instances
      */
-    public function __toString()
-    {
-        return $this->expression;
-    }
+    public function getFunctions();
 }
